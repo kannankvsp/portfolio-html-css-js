@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+}
+
+.sticky {
+    position: fixed;
+    background: rgb(82, 255, 3);
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0px, 350px));
+    align-items: center;
+    justify-items: baseline;
+    background: #222;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+.navigation>li {
+    padding: 10px 0px;
+}
+
+.navigation>li>a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 30px;
+}
+
+.navigation>li:hover, .active {
+    background: rgb(13, 0, 255);
+    border-radius: 20px;
+    transition: 0.5s;
+    translate: -0 10px;
+}
+span{
+    color: red;
+}
+.section {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    padding-top: 110px;
+    z-index: -1;
+    color: antiquewhite;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#myImg{
+    position: absolute;
+    right: 10vw;
+    z-index: -1;
+}
+
+.nameboard{
+    position: relative;
+    left: 4vw;
+    animation: slidingnameboard 5s 1;
+}
+
+.rotateprofile{
+    animation: myimgrotate 3s 1;
+}
+
+@keyframes slidingnameboard {
+    0%{
+        translate: 100vw;
+    }
+    100%{
+        translate: 0vw;
+    }
+}
+article{
+    padding:0 8vw;
+}
+article>li{
+    font-size: 1.5rem;
+}
+@keyframes myimgrotate{
+    from{ transform: rotate3d(1,1,0,0deg);}
+    to{transform: rotate3d(0,1,1,360deg);}
+}
+
+main>#skills,main>#projects{
+    display: block !important;
+}
+b{
+    color: blueviolet;
+    padding-bottom: 5px;
+}
+main>#skills>p,main>#projects>p{
+    font-size: 45px;
+    text-align: center;
+    color: darkred;
+}
+main>#skills>div>ul{
+    display: grid;
+    position: relative;
+    right:0vw;
+    font-size: 40px;
+    grid-template-columns: repeat(4,minmax(20vw,100vw));
+    grid-template-rows: 2;
+}
+main>#skills>div>ul>li{
+    padding: 0.5rem 0rem 0.5rem 3rem;
+    list-style: none;
+    background-image: url('./images/shield-halved-solid.svg');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 2rem;
+}
+h2{
+    text-align: center;
+}
+@media screen and (max-width:800px) {
+    main>#skills>div>ul{
+        left:0vw;
+        font-size: large;
+        grid-template-columns: repeat(2,minmax(20vw,100vw));
+    }
+}
+@media screen and (max-width:1150px) and (min-width:801px) {
+    main>#skills>div>ul{
+        left:0vw;
+        font-size: large;
+        grid-template-columns: repeat(3,minmax(20vw,100vw));
+    }
+}
+@media screen and (max-width:350px) {
+    
+    main>#skills>div>ul{
+        left:0vw;
+        font-size: large;
+        grid-template-columns: repeat(1,minmax(20vw,100vw));
+    }
+}
+@media screen and (max-width:500px) {
+    .section{
+        padding-top: 290px;
+    }
+.navigation{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0px, 250px));
+}
+}
+#contacts>ul{
+    list-style: none;
+    position: relative;
+    font-size: xx-large;
+}
+#contacts>ul{
+    padding-left: 10vw;
+}
+#contacts>ul>li{
+   padding: 20px;
+   padding-left: 60px;
+}
+.sec+#contacts{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 200px;
+}
+#contacts>ul>li>a{
+    text-decoration: none;
+    color: aqua;
+}
+.whatsapp{
+    list-style: none;
+    background-image: url('./images/whatsapp.svg');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 3rem;
+}
+
+.phone{
+    list-style: none;
+    background-image: url('./images/phone.svg');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 3rem;
+}
+.github{
+    list-style: none;
+    background-image: url('./images/github.svg');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 3rem;
+}
+.linkedin{
+    list-style: none;
+    background-image: url('./images/linkedin.svg');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 3rem;
+}
+.mail{
+    list-style: none;
+    background-image: url('./images/BPM-Mail.svg');
+    background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 3rem;
+}
